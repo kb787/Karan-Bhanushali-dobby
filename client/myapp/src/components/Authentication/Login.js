@@ -24,7 +24,7 @@ const Login = () => {
       );
       if (response.data.success) {
         message.success("Login Success");
-        navigate("/Profile");
+        navigate("/ImageUploading");
       } else {
         message.error("Invalid credentials");
       }
@@ -34,7 +34,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white">
+    <div className="flex items-center justify-center min-h-screen bg-slate-100">
       <div className="flex flex-col justify-center align-middle bg-slate-200 border-2 border-black p-5 rounded-xl  pt-6 pb-6 pr-15 pl-15 w-96 min-h-72">
         <p className="text-center text-2xl pb-4">Verify your credentials</p>
         <input

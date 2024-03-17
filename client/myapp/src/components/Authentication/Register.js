@@ -39,11 +39,8 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white">
+    <div className="flex items-center justify-center min-h-screen bg-slate-100">
       <div className="flex flex-col justify-center align-middle bg-slate-200 border-2  border-black p-5 rounded-xl h-5/6 pt-6 pb-6 pr-15 pl-15 w-96">
-        {/* <h5 className="text-2xl text-center font-serif">
-          {loading ? "Processing" : "Complete your registration"}
-        </h5> */}
         <input
           type="text"
           value={userName}

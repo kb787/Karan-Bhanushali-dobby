@@ -5,6 +5,7 @@ const server = http.createServer(app);
 const dotenv = require("dotenv");
 const Connection = require("./configure");
 const { registerRouter, loginRouter } = require("./authentication-controller");
+const uploadingRouter = require("./image-uploading-controller");
 const cors = require("cors");
 const corsOptions = {
   origin: "http://localhost:3000",
@@ -23,6 +24,7 @@ app.get("/", (req, res) => {
 
 app.use(base_endpoint, registerRouter);
 app.use(base_endpoint, loginRouter);
+app.use(base_endpoint, uploadingRouter);
 
 server.listen(port_no, () => {
   console.log(`App launched successfully on port no ${port_no}`);
